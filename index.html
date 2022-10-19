@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+      }
+      .container {
+        width: 380px;
+        height: 670px;
+        top: 0;
+        margin: 0px auto;
+        position: relative;
+        background-color: pink;
+        background: url(bg.png) no-repeat;
+        background-size: cover;
+      }
+      .container-header {
+        width: 100%;
+        height: 85px;
+      }
+      .header-left {
+        width: 100%;
+        height: 13%;
+        position: absolute;
+        background-image: url(style.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        top: 1px;
+        right: -1px;
+      }
+      .header-right {
+        width: 100%;
+        height: 34%;
+        position: absolute;
+        background-image: url(move.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 11px;
+        top: 0px;
+      }
+      .container-ganzi {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(ganzi.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 6px;
+        overflow: hidden;
+      }
+      .container-c3 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(c3.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 6px;
+        cursor: pointer;
+        z-index: 99;
+      }
+      .container-c2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(c2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 6px;
+        cursor: pointer;
+      }
+      .container-c1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(c1.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 6px;
+        cursor: pointer;
+        z-index: 99;
+      }
+      .container-c1:hover {
+        margin-top: -10px;
+      }
+
+      .container-arrow {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(indicate.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 0px;
+      }
+      .container-color {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(color.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 0px;
+      }
+      .container-next {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(next.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        left: 0px;
+        top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-header">
+        <div class="header-left"></div>
+        <div class="header-right"></div>
+        <div class="container-ganzi"></div>
+        <div class="container-c3"></div>
+        <div class="container-c2"></div>
+        <div class="container-c1"></div>
+
+        <div class="container-arrow"></div>
+        <div class="container-color"></div>
+        <div class="container-next"></div>
+      </div>
+    </div>
+  </body>
+</html>
