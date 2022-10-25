@@ -1,146 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
     <style>
-      body {
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-      }
-      .container {
-        width: 380px;
-        height: 670px;
-        top: 0;
-        margin: 0px auto;
-        position: relative;
-        background-color: pink;
-        background: url(bg.png) no-repeat;
-        background-size: cover;
-      }
-      .container-header {
-        width: 100%;
-        height: 85px;
-      }
-      .header-left {
-        width: 100%;
-        height: 13%;
-        position: absolute;
-        background-image: url(style.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        top: 1px;
-        right: -1px;
-      }
-      .header-right {
-        width: 100%;
-        height: 34%;
-        position: absolute;
-        background-image: url(move.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 11px;
-        top: 0px;
-      }
-      .container-ganzi {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image: url(ganzi.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 0px;
-        top: 6px;
-        overflow: hidden;
-      }
-      .container-c3 {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image: url(c3.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 0px;
-        top: 6px;
-        cursor: pointer;
-        z-index: 99;
-      }
-      .container-c2 {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image: url(c2.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 0px;
-        top: 6px;
-        cursor: pointer;
-      }
-      .container-c1 {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image: url(c1.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 0px;
-        top: 6px;
-        cursor: pointer;
-        z-index: 99;
-      }
-      .container-c1:hover {
-        margin-top: -10px;
-      }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            /* overflow: hidden; */
+        }
 
-      .container-arrow {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image: url(indicate.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 0px;
-        top: 0px;
-      }
-      .container-color {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image: url(color.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 0px;
-        top: 0px;
-      }
-      .container-next {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-image: url(next.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        left: 0px;
-        top: 0px;
-      }
+        #bg {
+            width: 380px;
+            height: 100%;
+            top: 0;
+            margin: 0px auto;
+            position: relative;
+        }
+		
+        #bg>img {
+            width: 100%;
+            height: 100%;
+        }
+		#left{
+			width:10%;
+			height:30% ;
+			top:50%;
+			left:5px;
+			position:absolute;
+		}
+        #head {
+            width: 85%;
+            height: 12%;
+            position: absolute;
+            background-image: url("img/head.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            top: 70px;
+            right: 10px;
+            /* overflow: hidden; */
+        }
+
+        #content {
+            width: 34%;
+            height: 34%;
+            position: absolute;
+            background-image: url("img/fu.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            left: 20px;
+            top: 142px;
+        }
+
+        #yg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            background-image: url("img/yg.png");
+            background-size: 100%;
+            overflow: hidden;
+        }
+
+        #cloth {
+            width: 440px;
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+
+        #cloth>img {
+            cursor: pointer;
+            position: absolute;
+            width: 60%;
+            height: 60%;
+        }
+
+        #cloth>img:hover {
+            transform: scale(1.1);
+        }
+
+        #cloth>img:nth-of-type(1) {
+            right: 120px;
+            bottom: 79px;
+        }
+
+        #cloth>img:nth-of-type(2) {
+            right: 10px;
+            bottom: 69px;
+        }
+
+        #cloth>img:nth-of-type(3) {
+            right: 0px;
+            bottom: 145px;
+            width: 45%;
+            height: 50%;
+        }
+        #start{
+        	width:20%;
+        	height:20%;
+        	left:0px;
+        	bottom:0px;
+        }
+        #start>img{
+        	cursor:pointer;
+        	position:absolute;
+        	display: flex;
+        	overflow: hidden;
+        }
+        #start>a {
+            position: absolute;
+            right: 60px;
+            bottom: 50px;
+            text-decoration: none;
+            font-size: 25px;
+            color: dimgray;
+             font-weight: bold; 
+            font-family: "STHupo";
+        }
+		#sheep{
+			width: 200px;
+            height: 310px;
+            position: absolute;
+             /background-image: url("img/click.png"); 
+            left: 0px;
+            bottom: 0px;
+            background-size: 100%;
+		}
+		#sheep>img{
+			position: absolute;
+            width: 90%;
+            height: 90%;
+            left: 0px;
+            bottom: 0px;
+		}
+		#ph{
+
+			font-size:2px;
+			color:gray;
+
+		}
+		#button {
+            width: 200px;
+            height: 310px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            background-size: 100%;
+        }
+        
+		#button>img {
+            /* cursor: pointer; */
+            position: absolute;
+            width: 65%;
+            height: 45%;
+            right: 20px;
+            bottom: 5px;
+        }
+        #button>img:hover {
+            transform: scale(1.1);
+        }
+        
+
+        #button>a {
+            position: absolute;
+            right: 60px;
+            bottom: 50px;
+            text-decoration: none;
+            font-size: 25px;
+            color: dimgray;
+            /* font-weight: bold; */
+            font-family: "STHupo";
+        }
+        /*#button {
+            width: 200px;
+            height: 310px;
+            position: absolute;
+             /background-image: url("img/click.png"); 
+            right: 0px;
+            bottom: 0px;
+            background-size: 100%;
+        }
+
+        #button>img {
+            /* cursor: pointer; 
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        #button>a {
+            position: absolute;
+            right: 60px;
+            bottom: 50px;
+            text-decoration: none;
+            font-size: 25px;
+            color: dimgray;
+            /* font-weight: bold; 
+            font-family: "STHupo";
+        }*/
+
+        /*#under {
+            width: 200px;
+            height: 35px;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+        }
+
+        #under>img {
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            left: 15px;
+            bottom: 20px;
+        }
+        /*<a href="p2.html">开始<br>定制</a>原草稿布局*/
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="container-header">
-        <div class="header-left"></div>
-        <div class="header-right"></div>
-        <div class="container-ganzi"></div>
-        <div class="container-c3"></div>
-        <div class="container-c2"></div>
-        <div class="container-c1"></div>
+</head>
 
-        <div class="container-arrow"></div>
-        <div class="container-color"></div>
-        <div class="container-next"></div>
-      </div>
+<body>
+    <div id="bg">
+        <img src="img/bg.jpg" alt="">
+        <div id="yg">
+        	<div id="left">
+        		<p id="ph">濮<br/>院<br/>毛<br/>衫<br/>×<br/>浙<br/>江<br/>传<br/>媒<br/>学<br/>院</p>
+        	</div>
+            <div id="head"></div>
+            <div id="content"></div>
+            <div id="cloth">
+                <img src="img/c1.png" alt="">
+                <img src="img/c2.png" alt="">
+                <img src="img/c3.png" alt="">
+            </div>
+        </div>
+        <div id="button">
+        	<img src="img/start.png">
+        	<a href="p2.html">
+        		开始
+        		<br/>
+        		定制
+        	</a>
+        </div>
+        <div id="sheep">
+            <img src="img/click.png" alt="">
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
